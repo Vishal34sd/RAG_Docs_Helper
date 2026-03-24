@@ -7,7 +7,7 @@ import {askKB} from "../rag_kb/ask"
 export const kbRouter = Router();
 
 const ingestBody = z.object({
-    text : z.string().min(1, "Provide some text to ingest");
+    text : z.string().min(1, "Provide some text to ingest"),
     source : z.string().optional()
 })
 
@@ -54,3 +54,5 @@ kbRouter.post("/ask", async(req , res)=>{
         console.log(err)
     }
 })
+
+export default kbRouter ;

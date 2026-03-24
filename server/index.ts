@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from "cors" ;
+import kbRouter from "./src/routes/askRag"
 
 
 
@@ -16,6 +17,7 @@ app.use(
 )
 
 app.use(express.json());
+app.use("/kb", kbRouter)
 
 
 
